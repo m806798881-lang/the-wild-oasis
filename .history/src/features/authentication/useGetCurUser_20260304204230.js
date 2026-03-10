@@ -1,9 +1,0 @@
-import { useQuery } from "@tanstack/react-query";
-import { getCurUser } from "../../services/apiAuth";
-
-function useGetCurUser() {
-  const {} = useQuery({ queryFn: () => getCurUser ,queryKey(['user'])});
-  return;
-}
-
-export default useGetCurUser;
