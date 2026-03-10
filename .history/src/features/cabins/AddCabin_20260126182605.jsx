@@ -1,0 +1,17 @@
+import { useState } from "react";
+import Button from "../../ui/Button";
+
+function AddCabin() {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpenModal((show) => !show)}>
+        Add new cabin
+      </Button>
+      {isOpenModal && <EditCreateCabinForm />}
+    </>
+  );
+}
+
+export default AddCabin;
